@@ -9,6 +9,7 @@ RUN apt-get update -qqy && DEBIAN_FRONTEND=noninteractive apt-get install -qqy -
     libqt5widgets5 \
     libqt5printsupport5 \
     libicu57 \
+    libmpfr4 \
 && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 ARG VERSION=2.1.7
@@ -18,7 +19,7 @@ RUN cd /tmp \
     && curl -LOSs https://github.com/MiniZinc/MiniZincIDE/releases/download/$VERSION/$FILE.tgz \
     && tar -xzf $FILE.tgz \
     && (cd $FILE \
-     && cp fzn-* mzn* /usr/local/bin \
+     && cp minizinc fzn-* mzn* /usr/local/bin \
      && cp -r share/minizinc /usr/local/share/ \
     ) \
     && rm -rf $FILE.tgz $FILE
