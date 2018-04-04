@@ -23,7 +23,7 @@ RUN cd /tmp \
     && curl -LOSs https://github.com/MiniZinc/MiniZincIDE/releases/download/$VERSION/$FILE.tgz \
     && tar -xzf $FILE.tgz \
     && (cd $FILE \
-     && cp minizinc fzn-* mzn* /usr/local/bin \
+     && cp minizinc flatzinc fzn-* mzn* solns2* /usr/local/bin \
      && cp -r share/minizinc /usr/local/share/ \
     ) \
     && rm -rf $FILE.tgz $FILE
