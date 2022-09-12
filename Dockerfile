@@ -1,7 +1,12 @@
-FROM apluslms/grade-python:3.7-3.5-3.4
+FROM apluslms/grade-python:3.9-4.6-4.5
 
-ARG VERSION=2.5.5
+ARG VERSION=2.6.4
 ARG NAME=MiniZincIDE-$VERSION-bundle-linux-x86_64
+
+RUN apt_install \
+    libqt5printsupport5 \
+ && :
+
 
 RUN cd /tmp \
     && curl -LOSs https://github.com/MiniZinc/MiniZincIDE/releases/download/$VERSION/$NAME.tgz \
