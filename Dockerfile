@@ -1,10 +1,11 @@
-FROM apluslms/grade-python:3.9-4.6-4.5
+FROM apluslms/grade-python:3.11-4.8-4.8u1
 
-ARG VERSION=2.6.4
+ARG VERSION=2.7.4
 ARG NAME=MiniZincIDE-$VERSION-bundle-linux-x86_64
 
 RUN apt_install \
-    libqt5printsupport5 \
+    libqt6printsupport6 \
+    libgl1-mesa-dev \
  && :
 
 
