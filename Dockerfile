@@ -1,6 +1,6 @@
-FROM apluslms/grade-python:3.11-4.9-4.10
+FROM apluslms/grade-python:3.13-4.13-4.10
 
-ARG VERSION=2.8.5
+ARG VERSION=2.9.3
 ARG NAME=MiniZincIDE-$VERSION-bundle-linux-x86_64
 
 RUN apt_install \
