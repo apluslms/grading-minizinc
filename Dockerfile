@@ -1,7 +1,7 @@
-FROM apluslms/grade-python:3.13-4.13-4.10
+FROM apluslms/grade-python:3.13-5.0-4.14
 
-ARG VERSION=2.9.3
-ARG NAME=MiniZincIDE-$VERSION-bundle-linux-x86_64
+ARG VERSION=2.10.1
+ARG NAME=MiniZincIDE-$VERSION-x86_64-linux-gnu
 
 RUN apt_install \
     libqt6printsupport6 \
