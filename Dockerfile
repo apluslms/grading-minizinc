@@ -4,6 +4,7 @@ ARG VERSION=2.10.1
 ARG NAME=MiniZincIDE-$VERSION-x86_64-linux-gnu
 
 RUN apt_install \
+    libgpg-error0 \
     libqt6printsupport6 \
     libgl1-mesa-dev \
  && :
@@ -20,3 +21,4 @@ RUN cd /tmp \
     && rm -rf $NAME.tgz $NAME
 
 ENV MZN_STDLIB_DIR=/usr/local/share/minizinc/
+ENV LD_LIBRARY_PATH=/usr/local/lib/minizinc
