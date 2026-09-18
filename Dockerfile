@@ -17,6 +17,7 @@ RUN cd /tmp \
      && cp bin/minizinc* bin/fzn-* bin/findMUS bin/mzn2doc /usr/local/bin \
      && cp -r share/minizinc /usr/local/share/ \
      && cp -r lib /usr/local/lib/minizinc \
+     && rm -f /usr/local/lib/minizinc/libselinux.so.1 \
     ) \
     && rm -rf $NAME.tgz $NAME
 
